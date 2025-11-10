@@ -1,0 +1,14 @@
+# Ignore all images except CASO_CUELLO_6
+Impresion-Medicina/imagenes/*
+!Impresion-Medicina/imagenes/CASO_CUELLO_6.nii.gz
+!Impresion-Medicina/imagenes/CASO_CUELLO_6.*        # en caso de otras extensiones
+
+# Ignore all segmentations except CASO_CUELLO_6 folder and its contents
+Impresion-Medicina/segmentations/*
+!Impresion-Medicina/segmentations/CASO_CUELLO_6/
+!Impresion-Medicina/segmentations/CASO_CUELLO_6/**
+
+# Other sensible ignores
+*.pyc
+__pycache__/
+.vscode/
