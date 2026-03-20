@@ -82,7 +82,7 @@ print("Trachea center RAS:", trachea_center)
 # ======================================================
 cuts = [
     ("Cabeza", trachea_center + np.array([0, 0, 70]), [0, 0, -1]),
-    ("Espalda", trachea_center + np.array([0, -50, 0]), [0, -1, 0]),
+    ("Espalda", trachea_center + np.array([0, -30, 0]), [0, -1, 0]),
     ("Derecha", trachea_center + np.array([70, 0, 0]), [1, 0, 0]),
     ("Izquierda", trachea_center + np.array([-70, 0, 0]), [-1, 0, 0]),
 ]

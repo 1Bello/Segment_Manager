@@ -42,9 +42,10 @@ for file in sorted(os.listdir(seg_dir)):
     if not file.lower().endswith(".nii.gz"):
         continue
 
-    if file.lower() in [ "body_trunc.nii", "body_trunc.nii.gz", "eye_left.nii", "eye_left.nii.gz", "eye_lens_left.nii", "eye_lens_left.nii.gz", "eye_lens_right.nii", "eye_lens_right.nii.gz", "eye_right.nii", "eye_right.nii.gz", "body.nii", "body.nii.gz", "body_extremities.nii", "body_extremities.nii.gz", "hard_palate.nii", "hard_palate.nii.gz", "torso_fat.nii", "torso_fat.nii.gz", "head.nii", "head.nii.gz"]:
-        print(f"Skipping segment: {file}")
-        continue
+    
+    #if file.lower() in [ "body_trunc.nii", "body_trunc.nii.gz", "eye_left.nii", "eye_left.nii.gz", "eye_lens_left.nii", "eye_lens_left.nii.gz", "eye_lens_right.nii", "eye_lens_right.nii.gz", "eye_right.nii", "eye_right.nii.gz", "body.nii", "body.nii.gz", "body_extremities.nii", "body_extremities.nii.gz", "hard_palate.nii", "hard_palate.nii.gz", "torso_fat.nii", "torso_fat.nii.gz", "head.nii", "head.nii.gz"]:
+    #    print(f"Skipping segment: {file}")
+    #    continue
     
     # 🌟 MODIFICACIÓN CLAVE: Limpiar el nombre del segmento 🌟
     # Esto asegura que "trachea.nii.gz" se convierta en "trachea"
