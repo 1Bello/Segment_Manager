@@ -34,11 +34,9 @@ def install_dependencies():
 
 try:
     import nibabel as nib
-    from totalsegmentator.python_api import totalsegmentator
 except ImportError:
     install_dependencies()
     import nibabel as nib
-    from totalsegmentator.python_api import totalsegmentator
 
 
 # ── Estructuras de cuello relevantes para el proyecto ─────────────────────────
@@ -116,30 +114,39 @@ def match_gt_file(structure_name: str, gt_dir: Path) -> Path | None:
 
 def run_totalsegmentator(ct_path: Path, output_dir: Path, use_gpu: bool) -> dict:
     """
-    Ejecuta los 3 tasks relevantes para cuello y mide tiempo total.
-    Retorna dict con tiempos por task y path del directorio de salida.
+    Ejecuta los 3 tasks relevantes para cuello via CLI (más estable entre versiones).
+    Retorna dict con tiempos por task.
     """
     output_dir.mkdir(parents=True, exist_ok=True)
     tiempos = {}
-
-    ct_img = nib.load(str(ct_path))
 
     for task in TASKS:
         task_out = output_dir / task
         task_out.mkdir(exist_ok=True)
         print(f"[TotalSegmentator] Corriendo task '{task}'...")
+
+        cmd = [
+            sys.executable, "-m", "totalsegmentator",
+            "-i", str(ct_path),
+            "-o", str(task_out),
+            "--task", task,
+        ]
+        if use_gpu:
+            cmd += ["--device", "gpu"]
+        else:
+            cmd += ["--device", "cpu"]
+
         t0 = time.time()
-        totalsegmentator(
-            input=ct_img,
-            output=str(task_out),
-            task=task,
-            fast=False,
-            device="gpu" if use_gpu else "cpu",
-            verbose=False,
-        )
+        result = subprocess.run(cmd, capture_output=True, text=True)
         elapsed = time.time() - t0
+
+        if result.returncode != 0:
+            print(f"  [WARN] Task '{task}' terminó con errores:")
+            print(result.stderr[-1500:])  # últimas líneas del error
+        else:
+            print(f"  → Task '{task}' completado en {elapsed:.1f}s")
+
         tiempos[task] = round(elapsed, 2)
-        print(f"  → Task '{task}' completado en {elapsed:.1f}s")
 
     return tiempos
 
