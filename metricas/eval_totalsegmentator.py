@@ -125,8 +125,15 @@ def run_totalsegmentator(ct_path: Path, output_dir: Path, use_gpu: bool) -> dict
         task_out.mkdir(exist_ok=True)
         print(f"[TotalSegmentator] Corriendo task '{task}'...")
 
+        # Buscar el ejecutable TotalSegmentator en el mismo entorno que Python
+        ts_exe = Path(sys.executable).parent / "TotalSegmentator"
+        if not ts_exe.exists():
+            ts_exe = Path(sys.executable).parent / "TotalSegmentator.exe"  # Windows
+        if not ts_exe.exists():
+            ts_exe = "TotalSegmentator"  # fallback: asumir que está en PATH
+
         cmd = [
-            sys.executable, "-m", "totalsegmentator",
+            str(ts_exe),
             "-i", str(ct_path),
             "-o", str(task_out),
             "--task", task,
