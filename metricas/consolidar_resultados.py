@@ -173,8 +173,11 @@ def fill_excel(ts_report, ms_report, yo_report, template_path, out_path):
     ws_orig = wb["Comparativa Modelos"]
 
     def find_row_by_label(ws, label_substr: str, col='A') -> int | None:
+        from openpyxl.cell.cell import MergedCell
         for row in ws.iter_rows():
             for cell in row:
+                if isinstance(cell, MergedCell):
+                    continue
                 if cell.column_letter == col and cell.value and label_substr.lower() in str(cell.value).lower():
                     return cell.row
         return None

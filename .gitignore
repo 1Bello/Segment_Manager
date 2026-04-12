@@ -1,6 +1,7 @@
 # Ignore all images except CASO_CUELLO_6
 Impresion-Medicina/imagenes/*
 /Pie/
+
 /Pie/**/*.dcm
 /Pie/**/*.DCM
 !Impresion-Medicina/imagenes/CASO_CUELLO_6.nii.gz
@@ -15,3 +16,7 @@ Impresion-Medicina/segmentations/*
 *.pyc
 __pycache__/
 .vscode/
+
+# Large model weights
+/metricas/medsam_vit_b.pth
+/metricas/yolov8x-seg.pt

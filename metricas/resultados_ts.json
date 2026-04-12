@@ -1,0 +1,207 @@
+{
+  "modelo": "TotalSegmentator (nnU-Net)",
+  "scan": "..\\Cuello\\imagenes\\CASO_CUELLO_5.nii.gz",
+  "dispositivo": "GPU",
+  "tiempo_inferencia": {
+    "total": 320.67,
+    "vertebrae": 3.38,
+    "head_glands_cavities": 307.04,
+    "total_segundos": 631.09,
+    "total_minutos": 10.52
+  },
+  "estructuras": {
+    "total_evaluadas": 20,
+    "detectadas_por_modelo": 19,
+    "con_gt_disponible": 15,
+    "comparadas_exitosamente": 15
+  },
+  "metricas_agregadas": {
+    "dice_promedio": 0.9332,
+    "dice_mediana": 0.9185,
+    "iou_promedio": 0.8812,
+    "dice_min": 0.7782,
+    "dice_max": 0.9998
+  },
+  "detalle_por_estructura": [
+    {
+      "estructura": "trachea",
+      "prediccion_encontrada": true,
+      "gt_encontrado": true,
+      "dice": 0.9366,
+      "iou": 0.8808,
+      "volumen_pred_ml": 32.06,
+      "volumen_gt_ml": 32.44
+    },
+    {
+      "estructura": "thyroid_gland",
+      "prediccion_encontrada": true,
+      "gt_encontrado": false,
+      "dice": null,
+      "iou": null,
+      "volumen_pred_ml": null,
+      "volumen_gt_ml": null
+    },
+    {
+      "estructura": "esophagus",
+      "prediccion_encontrada": true,
+      "gt_encontrado": false,
+      "dice": null,
+      "iou": null,
+      "volumen_pred_ml": null,
+      "volumen_gt_ml": null
+    },
+    {
+      "estructura": "sternum",
+      "prediccion_encontrada": true,
+      "gt_encontrado": false,
+      "dice": null,
+      "iou": null,
+      "volumen_pred_ml": null,
+      "volumen_gt_ml": null
+    },
+    {
+      "estructura": "heart",
+      "prediccion_encontrada": true,
+      "gt_encontrado": false,
+      "dice": null,
+      "iou": null,
+      "volumen_pred_ml": null,
+      "volumen_gt_ml": null
+    },
+    {
+      "estructura": "vertebrae_C1",
+      "prediccion_encontrada": true,
+      "gt_encontrado": true,
+      "dice": 0.8605,
+      "iou": 0.7551,
+      "volumen_pred_ml": 14.13,
+      "volumen_gt_ml": 15.58
+    },
+    {
+      "estructura": "vertebrae_C2",
+      "prediccion_encontrada": true,
+      "gt_encontrado": true,
+      "dice": 0.9141,
+      "iou": 0.8418,
+      "volumen_pred_ml": 18.85,
+      "volumen_gt_ml": 18.85
+    },
+    {
+      "estructura": "vertebrae_C3",
+      "prediccion_encontrada": true,
+      "gt_encontrado": true,
+      "dice": 0.898,
+      "iou": 0.8149,
+      "volumen_pred_ml": 11.98,
+      "volumen_gt_ml": 11.63
+    },
+    {
+      "estructura": "vertebrae_C4",
+      "prediccion_encontrada": true,
+      "gt_encontrado": true,
+      "dice": 0.8997,
+      "iou": 0.8177,
+      "volumen_pred_ml": 12.16,
+      "volumen_gt_ml": 11.67
+    },
+    {
+      "estructura": "vertebrae_C5",
+      "prediccion_encontrada": true,
+      "gt_encontrado": true,
+      "dice": 0.8971,
+      "iou": 0.8133,
+      "volumen_pred_ml": 13.13,
+      "volumen_gt_ml": 12.84
+    },
+    {
+      "estructura": "vertebrae_C6",
+      "prediccion_encontrada": true,
+      "gt_encontrado": true,
+      "dice": 0.8976,
+      "iou": 0.8142,
+      "volumen_pred_ml": 15.73,
+      "volumen_gt_ml": 15.26
+    },
+    {
+      "estructura": "vertebrae_C7",
+      "prediccion_encontrada": true,
+      "gt_encontrado": true,
+      "dice": 0.9185,
+      "iou": 0.8492,
+      "volumen_pred_ml": 19.22,
+      "volumen_gt_ml": 18.8
+    },
+    {
+      "estructura": "parotid_gland_left",
+      "prediccion_encontrada": true,
+      "gt_encontrado": true,
+      "dice": 0.9994,
+      "iou": 0.9988,
+      "volumen_pred_ml": 18.73,
+      "volumen_gt_ml": 18.71
+    },
+    {
+      "estructura": "parotid_gland_right",
+      "prediccion_encontrada": true,
+      "gt_encontrado": true,
+      "dice": 0.9995,
+      "iou": 0.999,
+      "volumen_pred_ml": 18.6,
+      "volumen_gt_ml": 18.59
+    },
+    {
+      "estructura": "submandibular_gland_left",
+      "prediccion_encontrada": true,
+      "gt_encontrado": true,
+      "dice": 0.9996,
+      "iou": 0.9991,
+      "volumen_pred_ml": 5.86,
+      "volumen_gt_ml": 5.85
+    },
+    {
+      "estructura": "submandibular_gland_right",
+      "prediccion_encontrada": true,
+      "gt_encontrado": true,
+      "dice": 0.9998,
+      "iou": 0.9996,
+      "volumen_pred_ml": 6.61,
+      "volumen_gt_ml": 6.61
+    },
+    {
+      "estructura": "nasal_cavity_left",
+      "prediccion_encontrada": true,
+      "gt_encontrado": true,
+      "dice": 0.9992,
+      "iou": 0.9984,
+      "volumen_pred_ml": 13.8,
+      "volumen_gt_ml": 13.8
+    },
+    {
+      "estructura": "nasal_cavity_right",
+      "prediccion_encontrada": true,
+      "gt_encontrado": true,
+      "dice": 0.9995,
+      "iou": 0.9991,
+      "volumen_pred_ml": 13.69,
+      "volumen_gt_ml": 13.68
+    },
+    {
+      "estructura": "larynx_air",
+      "prediccion_encontrada": false,
+      "gt_encontrado": false,
+      "dice": null,
+      "iou": null,
+      "volumen_pred_ml": null,
+      "volumen_gt_ml": null
+    },
+    {
+      "estructura": "skull",
+      "prediccion_encontrada": true,
+      "gt_encontrado": true,
+      "dice": 0.7782,
+      "iou": 0.637,
+      "volumen_pred_ml": 606.0,
+      "volumen_gt_ml": 491.56
+    }
+  ]
+}

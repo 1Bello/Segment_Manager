@@ -1,0 +1,159 @@
+{
+  "modelo": "MedSAM (SAM fine-tuned médico — modo semi-automático con bbox GT)",
+  "nota_metodologica": "Los bounding boxes se extrajeron del ground truth (modo upper-bound). En producción, MedSAM requiere prompts manuales o una etapa de detección previa.",
+  "scan": "C:\\Users\\MBX\\Desktop\\bello-rodriguez\\Segment_Manager\\Cuello\\imagenes\\CASO_CUELLO_5.nii.gz",
+  "dispositivo": "GPU",
+  "tiempo_inferencia": {
+    "total_segundos": 32.25,
+    "total_minutos": 0.54
+  },
+  "estructuras": {
+    "total_evaluadas": 15,
+    "con_gt_disponible": 12,
+    "comparadas_exitosamente": 12
+  },
+  "metricas_agregadas": {
+    "dice_promedio": 0.7007,
+    "dice_mediana": 0.6831,
+    "iou_promedio": 0.5483,
+    "dice_min": 0.5681,
+    "dice_max": 0.9079
+  },
+  "detalle_por_estructura": [
+    {
+      "estructura": "trachea",
+      "gt_encontrado": true,
+      "prediccion_encontrada": true,
+      "dice": 0.9079,
+      "iou": 0.8314,
+      "volumen_pred_ml": 30.69,
+      "volumen_gt_ml": 32.44
+    },
+    {
+      "estructura": "thyroid_gland",
+      "gt_encontrado": false,
+      "prediccion_encontrada": false,
+      "dice": null,
+      "iou": null,
+      "volumen_pred_ml": null,
+      "volumen_gt_ml": null
+    },
+    {
+      "estructura": "esophagus",
+      "gt_encontrado": false,
+      "prediccion_encontrada": false,
+      "dice": null,
+      "iou": null,
+      "volumen_pred_ml": null,
+      "volumen_gt_ml": null
+    },
+    {
+      "estructura": "vertebrae_C1",
+      "gt_encontrado": true,
+      "prediccion_encontrada": true,
+      "dice": 0.5681,
+      "iou": 0.3967,
+      "volumen_pred_ml": 29.24,
+      "volumen_gt_ml": 15.58
+    },
+    {
+      "estructura": "vertebrae_C2",
+      "gt_encontrado": true,
+      "prediccion_encontrada": true,
+      "dice": 0.661,
+      "iou": 0.4936,
+      "volumen_pred_ml": 31.68,
+      "volumen_gt_ml": 18.85
+    },
+    {
+      "estructura": "vertebrae_C3",
+      "gt_encontrado": true,
+      "prediccion_encontrada": true,
+      "dice": 0.603,
+      "iou": 0.4317,
+      "volumen_pred_ml": 20.13,
+      "volumen_gt_ml": 11.63
+    },
+    {
+      "estructura": "vertebrae_C4",
+      "gt_encontrado": true,
+      "prediccion_encontrada": true,
+      "dice": 0.6938,
+      "iou": 0.5311,
+      "volumen_pred_ml": 17.8,
+      "volumen_gt_ml": 11.67
+    },
+    {
+      "estructura": "vertebrae_C5",
+      "gt_encontrado": true,
+      "prediccion_encontrada": true,
+      "dice": 0.7679,
+      "iou": 0.6233,
+      "volumen_pred_ml": 17.24,
+      "volumen_gt_ml": 12.84
+    },
+    {
+      "estructura": "vertebrae_C6",
+      "gt_encontrado": true,
+      "prediccion_encontrada": true,
+      "dice": 0.747,
+      "iou": 0.5962,
+      "volumen_pred_ml": 20.18,
+      "volumen_gt_ml": 15.26
+    },
+    {
+      "estructura": "vertebrae_C7",
+      "gt_encontrado": true,
+      "prediccion_encontrada": true,
+      "dice": 0.8348,
+      "iou": 0.7165,
+      "volumen_pred_ml": 18.11,
+      "volumen_gt_ml": 18.8
+    },
+    {
+      "estructura": "parotid_gland_left",
+      "gt_encontrado": true,
+      "prediccion_encontrada": true,
+      "dice": 0.599,
+      "iou": 0.4276,
+      "volumen_pred_ml": 10.59,
+      "volumen_gt_ml": 18.71
+    },
+    {
+      "estructura": "parotid_gland_right",
+      "gt_encontrado": true,
+      "prediccion_encontrada": true,
+      "dice": 0.7159,
+      "iou": 0.5575,
+      "volumen_pred_ml": 14.05,
+      "volumen_gt_ml": 18.59
+    },
+    {
+      "estructura": "submandibular_gland_left",
+      "gt_encontrado": true,
+      "prediccion_encontrada": true,
+      "dice": 0.6374,
+      "iou": 0.4678,
+      "volumen_pred_ml": 3.71,
+      "volumen_gt_ml": 5.85
+    },
+    {
+      "estructura": "submandibular_gland_right",
+      "gt_encontrado": true,
+      "prediccion_encontrada": true,
+      "dice": 0.6725,
+      "iou": 0.5065,
+      "volumen_pred_ml": 3.97,
+      "volumen_gt_ml": 6.61
+    },
+    {
+      "estructura": "larynx_air",
+      "gt_encontrado": false,
+      "prediccion_encontrada": false,
+      "dice": null,
+      "iou": null,
+      "volumen_pred_ml": null,
+      "volumen_gt_ml": null
+    }
+  ]
+}

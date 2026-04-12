@@ -1,0 +1,190 @@
+{
+  "modelo": "YOLO (YOLOv8x-seg — 2D, dominio general, sin fine-tuning médico)",
+  "nota_metodologica": "YOLO no fue diseñado para segmentación volumétrica CT. Se evaluó en modo 2D slice-a-slice con matching por IoU de región. Esta es la evaluación más favorable posible para YOLO. Los resultados bajos confirman la inadecuación del modelo para esta tarea.",
+  "scan": "C:\\Users\\MBX\\Desktop\\bello-rodriguez\\Segment_Manager\\Cuello\\imagenes\\CASO_CUELLO_5.nii.gz",
+  "dispositivo": "GPU",
+  "tiempo_inferencia": {
+    "inferencia_pura_segundos": 3.98,
+    "total_con_evaluacion_segundos": 10.69,
+    "total_minutos": 0.18
+  },
+  "estructuras": {
+    "total_evaluadas": 15,
+    "con_gt_disponible": 12,
+    "comparadas_exitosamente": 12
+  },
+  "metricas_agregadas": {
+    "dice_promedio": 0.1024,
+    "dice_mediana": 0.0871,
+    "iou_promedio": 0.0589,
+    "dice_min": 0.0,
+    "dice_max": 0.4363
+  },
+  "detalle_por_estructura": [
+    {
+      "estructura": "trachea",
+      "gt_encontrado": true,
+      "prediccion_encontrada": false,
+      "dice": 0.0,
+      "iou": 0.0,
+      "volumen_pred_ml": 0.0,
+      "volumen_gt_ml": 32.44,
+      "slices_con_gt": 38,
+      "slices_con_match_yolo": 0
+    },
+    {
+      "estructura": "thyroid_gland",
+      "gt_encontrado": false,
+      "prediccion_encontrada": false,
+      "dice": null,
+      "iou": null,
+      "volumen_pred_ml": null,
+      "volumen_gt_ml": null,
+      "slices_con_gt": 0,
+      "slices_con_match_yolo": 0
+    },
+    {
+      "estructura": "esophagus",
+      "gt_encontrado": false,
+      "prediccion_encontrada": false,
+      "dice": null,
+      "iou": null,
+      "volumen_pred_ml": null,
+      "volumen_gt_ml": null,
+      "slices_con_gt": 0,
+      "slices_con_match_yolo": 0
+    },
+    {
+      "estructura": "vertebrae_C1",
+      "gt_encontrado": true,
+      "prediccion_encontrada": true,
+      "dice": 0.0922,
+      "iou": 0.0483,
+      "volumen_pred_ml": 91.87,
+      "volumen_gt_ml": 15.58,
+      "slices_con_gt": 11,
+      "slices_con_match_yolo": 2
+    },
+    {
+      "estructura": "vertebrae_C2",
+      "gt_encontrado": true,
+      "prediccion_encontrada": true,
+      "dice": 0.082,
+      "iou": 0.0427,
+      "volumen_pred_ml": 28.87,
+      "volumen_gt_ml": 18.85,
+      "slices_con_gt": 24,
+      "slices_con_match_yolo": 1
+    },
+    {
+      "estructura": "vertebrae_C3",
+      "gt_encontrado": true,
+      "prediccion_encontrada": true,
+      "dice": 0.1675,
+      "iou": 0.0914,
+      "volumen_pred_ml": 29.44,
+      "volumen_gt_ml": 11.63,
+      "slices_con_gt": 11,
+      "slices_con_match_yolo": 2
+    },
+    {
+      "estructura": "vertebrae_C4",
+      "gt_encontrado": true,
+      "prediccion_encontrada": true,
+      "dice": 0.4363,
+      "iou": 0.279,
+      "volumen_pred_ml": 5.78,
+      "volumen_gt_ml": 11.67,
+      "slices_con_gt": 13,
+      "slices_con_match_yolo": 2
+    },
+    {
+      "estructura": "vertebrae_C5",
+      "gt_encontrado": true,
+      "prediccion_encontrada": true,
+      "dice": 0.1436,
+      "iou": 0.0774,
+      "volumen_pred_ml": 10.9,
+      "volumen_gt_ml": 12.84,
+      "slices_con_gt": 15,
+      "slices_con_match_yolo": 2
+    },
+    {
+      "estructura": "vertebrae_C6",
+      "gt_encontrado": true,
+      "prediccion_encontrada": true,
+      "dice": 0.198,
+      "iou": 0.1099,
+      "volumen_pred_ml": 10.9,
+      "volumen_gt_ml": 15.26,
+      "slices_con_gt": 19,
+      "slices_con_match_yolo": 2
+    },
+    {
+      "estructura": "vertebrae_C7",
+      "gt_encontrado": true,
+      "prediccion_encontrada": true,
+      "dice": 0.109,
+      "iou": 0.0577,
+      "volumen_pred_ml": 11.27,
+      "volumen_gt_ml": 18.8,
+      "slices_con_gt": 23,
+      "slices_con_match_yolo": 2
+    },
+    {
+      "estructura": "parotid_gland_left",
+      "gt_encontrado": true,
+      "prediccion_encontrada": false,
+      "dice": 0.0,
+      "iou": 0.0,
+      "volumen_pred_ml": 0.0,
+      "volumen_gt_ml": 18.71,
+      "slices_con_gt": 24,
+      "slices_con_match_yolo": 0
+    },
+    {
+      "estructura": "parotid_gland_right",
+      "gt_encontrado": true,
+      "prediccion_encontrada": false,
+      "dice": 0.0,
+      "iou": 0.0,
+      "volumen_pred_ml": 0.0,
+      "volumen_gt_ml": 18.59,
+      "slices_con_gt": 25,
+      "slices_con_match_yolo": 0
+    },
+    {
+      "estructura": "submandibular_gland_left",
+      "gt_encontrado": true,
+      "prediccion_encontrada": false,
+      "dice": 0.0,
+      "iou": 0.0,
+      "volumen_pred_ml": 0.0,
+      "volumen_gt_ml": 5.85,
+      "slices_con_gt": 19,
+      "slices_con_match_yolo": 0
+    },
+    {
+      "estructura": "submandibular_gland_right",
+      "gt_encontrado": true,
+      "prediccion_encontrada": false,
+      "dice": 0.0,
+      "iou": 0.0,
+      "volumen_pred_ml": 0.0,
+      "volumen_gt_ml": 6.61,
+      "slices_con_gt": 21,
+      "slices_con_match_yolo": 0
+    },
+    {
+      "estructura": "larynx_air",
+      "gt_encontrado": false,
+      "prediccion_encontrada": false,
+      "dice": null,
+      "iou": null,
+      "volumen_pred_ml": null,
+      "volumen_gt_ml": null,
+      "slices_con_gt": 0,
+      "slices_con_match_yolo": 0
+    }
+  ]
+}
