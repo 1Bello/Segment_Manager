@@ -1,5 +1,8 @@
 # Ignore all images except CASO_CUELLO_6
 Impresion-Medicina/imagenes/*
+/Pie/
+/Pie/**/*.dcm
+/Pie/**/*.DCM
 !Impresion-Medicina/imagenes/CASO_CUELLO_6.nii.gz
 !Impresion-Medicina/imagenes/CASO_CUELLO_6.*        # en caso de otras extensiones
 
